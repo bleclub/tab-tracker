@@ -11,9 +11,9 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/status', (req, res) => {
+app.post('/register', (req, res) => {
   res.send({
-    message: 'Hello world!!',
+    message: `Hello ${req.body.email}!! Your user was registered!`,
   });
 });
 
